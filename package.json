@@ -7,7 +7,7 @@
     "start": "node lib/server/index.js",  // Start from compiled JavaScript in lib/
     "heroku-postbuild": "yarn && tsc --project tsconfig.server.json",  // Compile TypeScript using tsc
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  }, 
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kevinshen56714/SkyOffice.git"
