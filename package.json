@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "Server for SkyOffice",
   "main": ".eslintrc.js",
-  "scripts": {
-    "start": "ts-node-dev --project tsconfig.server.json --respawn --transpile-only server/index.ts",
-    "heroku-postbuild": "yarn && cd types && yarn && cd ../server && tsc --project tsconfig.server.json",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+ "scripts": {
+  "start": "node server/index.js",  // Start from the compiled TS (no need to use lib/)
+  "heroku-postbuild": "yarn && cd server && yarn && tsc --project tsconfig.server.json",  // Compile TS to JS
+  "test": "echo \"Error: no test specified\" && exit 1"
+}
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kevinshen56714/SkyOffice.git"
