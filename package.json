@@ -4,10 +4,13 @@
   "description": "Server for SkyOffice",
   "main": ".eslintrc.js",
   "scripts": {
-    "start": "node lib/server/index.js",  // Start from compiled JavaScript in lib/
-    "heroku-postbuild": "yarn && tsc --project tsconfig.server.json",  // Compile TypeScript using tsc
+    "start": "node server/index.js",  // Run from compiled JavaScript in server/
+    "heroku-postbuild": "yarn install && tsc --project tsconfig.server.json",  // Ensure dependencies are installed and compile TS
     "test": "echo \"Error: no test specified\" && exit 1"
-  }, 
+  },
+  "engines": {
+    "node": "18.x"  // Explicitly define Node.js version
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kevinshen56714/SkyOffice.git"
