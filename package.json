@@ -4,8 +4,8 @@
   "description": "Server for SkyOffice",
   "main": ".eslintrc.js",
   "scripts": {
-    "start": "node server/index.js",  // Run from compiled JavaScript in server/
-    "heroku-postbuild": "yarn install && tsc --project tsconfig.server.json",  // Ensure dependencies are installed and compile TS
+    "start": "node lib/server/index.js",  // Run from compiled JavaScript in lib/
+    "heroku-postbuild": "yarn install && tsc --project tsconfig.server.json",  // Compile TypeScript using tsc
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
